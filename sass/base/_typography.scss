@@ -1,0 +1,15 @@
+body {
+    // default font properties
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #222831;
+}
+
+.heading-primary {
+    font-size: 3rem;
+    letter-spacing: .3rem;
+    margin-bottom: 3rem;
+    transition: all .2s;
+    color: $color-1;
+}

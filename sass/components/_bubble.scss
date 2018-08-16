@@ -1,0 +1,27 @@
+.bubble {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1rem 3rem;
+    padding: 1.5rem;
+    color: $color-4;
+
+    &--1 { background-color: $color-1; }
+    &--2 { background-color: $color-3; }
+    &--3 { background-color: $color-2; }
+
+    &__heading {
+        span {
+            display: block;
+            margin-bottom: -.7rem;
+        }
+    }
+
+}
+
+.bubble-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
