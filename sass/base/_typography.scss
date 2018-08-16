@@ -13,3 +13,11 @@ body {
     transition: all .2s;
     color: $color-1;
 }
+
+.about__text {
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    padding: 0rem 10rem;
+    max-width: 120rem;
+}

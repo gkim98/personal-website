@@ -18,20 +18,12 @@ web and data:
 
 
 cards = [
-    // grant kim
-    {
-        img_url: '../img/grant-pic.jpg',
-        type: 'personal',
-        title: 'grant kim',
-        summary: `a kid who is way too into minimalistic design. also likes web dev,
-            machine learning, psychology, and rom-coms.`
-    },
     // integrated language
     {
         img_url: '../img/integrated-language.PNG',
         type: ['web'],
         title: 'integrated language',
-        summary: 'chrome extension that integrates foreign language into everyday internet usage.'
+        summary: `chrome extension that integrates foreign language into everyday internet usage.`
     },
     // streamlines
     {
@@ -60,6 +52,5 @@ cards = [
         type: ['data'],
         title: 'how to kickoff kickstarter',
         summary: 'uncovering what makes for a successful kickstarter campaign.'
-    },
-    //
+    }
 ]
