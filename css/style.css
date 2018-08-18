@@ -22,7 +22,6 @@ body {
   font-size: 3rem;
   letter-spacing: .3rem;
   margin-bottom: 3rem;
-  transition: all .2s;
   color: #222831; }
 
 .about__text {
@@ -30,7 +29,8 @@ body {
   margin: 0 auto;
   margin-bottom: 5rem;
   padding: 0rem 10rem;
-  max-width: 120rem; }
+  max-width: 120rem;
+  text-align: center; }
 
 .u-margin-bottom-small {
   margin-bottom: 5rem !important; }
@@ -40,38 +40,127 @@ body {
 
 .bubble {
   display: inline-block;
-  height: 20rem;
-  width: 20rem;
-  border-radius: 50%;
   margin: 1rem 3rem;
   padding: 1.5rem;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
   color: #eeeeee;
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
   transition: all .3s; }
   .bubble--1 {
     background-color: #222831; }
   .bubble--2 {
-    background-color: #00adb5; }
-  .bubble--3 {
     background-color: #393e46; }
+  .bubble--3 {
+    background-color: #00adb5; }
   .bubble:hover {
     transform: translateY(-1rem) scale(1.05);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
   .bubble__heading {
     display: inline-block;
-    width: 90%;
-    font-size: 1.5rem;
+    width: 70%;
+    font-size: 2rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #eeeeee; }
   .bubble__description {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.5; }
 
 .bubble-holder {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
+
+.card {
+  position: relative;
+  margin: 3rem;
+  padding: 2rem;
+  width: 70rem;
+  height: 40rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
+  background-color: #00adb5;
+  transition: transform .4s, box-shadow .4s; }
+  .card__content {
+    display: table;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: #eeeeee;
+    overflow: hidden; }
+  .card__title {
+    display: block;
+    font-size: 3rem;
+    line-height: 1.1; }
+  .card__info {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #00adb5; }
+  .card__img {
+    overflow: hidden;
+    float: left;
+    width: 50%;
+    height: 20rem;
+    background-image: url(../../img/data-plus.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem; }
+  .card__background {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    font-weight: 500; }
+  .card__summary {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 500; }
+  .card__link, .card__link:visited, .card__link:link {
+    display: inline-block;
+    text-decoration: none;
+    color: #222831;
+    font-weight: 700;
+    border-bottom: 1px dotted #393e46;
+    transition: all .3s;
+    cursor: pointer; }
+  .card__github {
+    position: absolute;
+    bottom: 3rem;
+    left: 4rem;
+    width: 6rem;
+    height: auto;
+    transition: all .3s;
+    cursor: pointer; }
+  .card__github:hover {
+    transform: rotate(5deg) scale(1.1); }
+  .card__tool-box {
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    font-size: 1.5rem; }
+  .card__tool-span {
+    font-weight: 700;
+    color: #222831; }
+  .card__tool-list {
+    color: #222831; }
+  .card:not(:last-child) {
+    margin-bottom: 2rem; }
+  .card:hover {
+    transform: translateY(-0.5rem) scale(1.03);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+
+.card-holder {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: opacity .3s; }
 
 .header {
   position: relative;
@@ -109,8 +198,9 @@ body {
   display: flex;
   padding: 0 5rem;
   max-width: 100rem;
-  margin: 0 auto; }
-  .filter__item {
+  margin: 0 auto;
+  margin-bottom: 7.5rem; }
+  .filter__option {
     flex-grow: 1;
     position: relative;
     font-size: 2rem;
@@ -118,29 +208,20 @@ body {
     padding: 1.5rem 0;
     color: #00adb5;
     background-color: #eeeeee;
-    transition: .3s;
+    transition: all .3s;
     overflow: hidden; }
-    .filter__item span {
-      z-index: 2; }
-    .filter__item:first-child {
+    .filter__option:first-child {
       border-top-left-radius: 2.5rem;
       border-bottom-left-radius: 2.5rem; }
-    .filter__item:last-child {
+    .filter__option:last-child {
       border-top-right-radius: 2.5rem;
       border-bottom-right-radius: 2.5rem; }
-    .filter__item:hover {
+    .filter__option:hover {
       transform: translateY(-0.5rem); }
-    .filter__item::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: "";
-      width: 100%;
-      height: 100%;
-      background-color: #00adb5;
-      opacity: 0;
-      z-index: -1;
-      transition: all .4s; }
+
+.selected {
+  background-color: #00adb5;
+  color: #eeeeee; }
 
 .section-header {
   height: 100vh; }

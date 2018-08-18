@@ -1,9 +1,121 @@
 .card {
+    
+    position: relative;
+    margin: 3rem;
+    padding: 2rem;
+    width: 70rem;
+    height: 40rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 2rem rgba($color-black, .15);
+    background-color: $color-3;
+    transition: transform .4s, box-shadow .4s;
 
+    &__content {
+        display: table;
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        background-color: $color-4;
+        overflow: hidden;
+    }
+
+    &__title {
+        display: block;
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+
+    &__info {
+        display: block;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: $color-3;
+    }
+
+    &__img {
+        overflow: hidden;
+        float: left;
+        width: 50%;
+        height: 20rem;
+        background-image: url(../../img/data-plus.png);
+        background-size: cover;
+        background-position: center;
+        border-radius: 3px;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+    }
+
+    &__background {
+        font-size: 1.5rem;
+        text-align: left;
+        margin-bottom: 1rem;
+        font-weight: 500;
+    }
+
+    &__summary {
+        font-size: 1.5rem;
+        text-align: left;
+        font-weight: 500;
+    }
+
+    &__link,
+    &__link:visited,
+    &__link:link {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-1;
+        font-weight: 700;
+        border-bottom: 1px dotted $color-2;
+        transition: all .3s;
+        cursor: pointer;
+    }
+
+    &__github {
+        position: absolute;
+        bottom: 3rem;
+        left: 4rem;
+        width: 6rem;
+        height: auto;
+        transition: all .3s;
+        cursor: pointer;
+    }
+
+    &__github:hover {
+        transform: rotate(5deg) scale(1.1);
+    }
+
+    &__tool-box {
+        position: absolute;
+        right: 3rem;
+        bottom: 3rem;
+        font-size: 1.5rem;
+    }
+
+    &__tool-span {
+        font-weight: 700;
+        color: $color-1;
+    }
+
+    &__tool-list {
+        color: $color-1;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &:hover {
+        transform: translateY(-.5rem) scale(1.03);
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    }
 }
 
 .card-holder {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: opacity .3s;
 }
