@@ -21,7 +21,7 @@ dataPlusLink = '<a href="https://bigdata.duke.edu/projects/complex-decisions-rea
 cards = [
     // integrated language
     {
-        img_url: '../img/integrated-language.png',
+        img_url: '../img/integrated-language.PNG',
         type: ['web'],
         title: 'integrated language',
         info: 'hackduke (oct 2017), cont. jan 2018',
@@ -32,7 +32,7 @@ cards = [
     },
     // sound escape
     {
-        img_url: '../img/sound-escape.png',
+        img_url: '../img/sound-escape.PNG',
         type: ['web'],
         title: 'sound escape',
         info: 'packhacks (april 2018)',
@@ -43,7 +43,7 @@ cards = [
     },
     // streamlines
     {
-        img_url: '../img/streamlines.png',
+        img_url: '../img/streamlines.PNG',
         type: ['web'],
         title: 'streamlines',
         info: 'feb 2018',
@@ -54,7 +54,7 @@ cards = [
     },
     // data plus
     {
-        img_url: '../img/data-plus.png',
+        img_url: '../img/data-plus.PNG',
         type: ['data'],
         title: 'complex decisions, real numbers',
         info: 'may 2018 - aug 2018',
@@ -65,7 +65,7 @@ cards = [
     },
     // math visualization
     {
-        img_url: '../img/math-visualization.png',
+        img_url: '../img/math-visualization.PNG',
         type: ['data'],
         title: 'math department dashboard',
         info: 'feb 2018 - may 2018',
@@ -76,7 +76,7 @@ cards = [
     },
     // how to kickoff kickstarter
     {
-        img_url: '../img/kickstarter.png',
+        img_url: '../img/kickstarter.PNG',
         type: ['data'],
         title: 'how to kickoff kickstarter',
         info: 'jan 2018',
