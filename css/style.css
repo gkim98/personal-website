@@ -224,7 +224,8 @@ body {
   color: #eeeeee; }
 
 .section-header {
-  height: 100vh; }
+  height: 100vh;
+  min-height: 40rem; }
 
 .section-about {
   text-align: center;
@@ -238,3 +239,23 @@ body {
 .section-contact {
   text-align: center;
   padding: 7.5rem 3rem; }
+  .section-contact .contact-hi {
+    font-size: 2rem;
+    margin-bottom: 3rem; }
+  .section-contact .contact-email,
+  .section-contact .contact-email:link,
+  .section-contact .contact-email:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #00adb5;
+    transition: all .3s; }
+    .section-contact .contact-email:hover,
+    .section-contact .contact-email:link:hover,
+    .section-contact .contact-email:visited:hover {
+      transform: scale(1.1) translateX(0.8rem); }
+  .section-contact .contact-logo {
+    display: inline-block;
+    height: 5rem;
+    width: auto; }
+    .section-contact .contact-logo--github {
+      margin-right: 1rem; }

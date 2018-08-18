@@ -1,5 +1,6 @@
 .section-header {
     height: 100vh;
+    min-height: 40rem;
 }
 
 .section-about {
@@ -16,4 +17,35 @@
 .section-contact {
     text-align: center;
     padding: 7.5rem 3rem;
+
+    .contact-hi {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .contact-email,
+    .contact-email:link,
+    .contact-email:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: $color-3;
+        transition: all .3s;
+
+        &:hover {
+            transform: scale(1.1) translateX(.8rem);
+        }
+    }
+
+    .contact-logo-holder {
+    }
+
+    .contact-logo {
+        display: inline-block;
+        height: 5rem;
+        width: auto;
+
+        &--github {
+            margin-right: 1rem;
+        }
+    }
 }
