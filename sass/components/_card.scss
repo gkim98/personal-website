@@ -1,7 +1,6 @@
 .card {
-    
     position: relative;
-    margin: 3rem;
+    margin: 3rem 3rem;
     padding: 2rem;
     width: 70rem;
     height: 40rem;
@@ -68,8 +67,19 @@
         color: $color-1;
         font-weight: 700;
         border-bottom: 1px dotted $color-2;
-        transition: all .3s;
         cursor: pointer;
+    }
+
+    &__tools {
+        position: absolute;
+        display: inline-block;
+        right: 3rem;
+        bottom: 3rem;
+        font-size: 1.5rem;
+
+        span {
+            font-weight: 700;
+        }
     }
 
     &__github {
@@ -86,29 +96,67 @@
         transform: rotate(5deg) scale(1.1);
     }
 
-    &__tool-box {
-        position: absolute;
-        right: 3rem;
-        bottom: 3rem;
-        font-size: 1.5rem;
-    }
-
-    &__tool-span {
-        font-weight: 700;
-        color: $color-1;
-    }
-
-    &__tool-list {
-        color: $color-1;
-    }
-
+    // margin between the cards
     &:not(:last-child) {
         margin-bottom: 2rem;
     }
 
+    // cards have a slight rising effect when hovered
     &:hover {
         transform: translateY(-.5rem) scale(1.03);
         box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    }
+
+    // turns cards vertical for small screen sizes
+    @include respond(eight-hundred) {
+        width: 50rem;
+        height: auto;
+        padding: 2rem;
+
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        // pushes tools and github down
+        &__text {
+            display: block;
+        }
+
+        &__tools {
+            display: block;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        &__github {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            &:hover {
+                transform: none;
+            }
+        }
+
+        // takes away hovering of cards
+        &:hover {
+            transform: none;
+            box-shadow: none;
+        }
+    }
+
+    @include respond(four-hundred) {
+        padding: 1rem;
+        margin: 1.5rem 0;
     }
 }
 

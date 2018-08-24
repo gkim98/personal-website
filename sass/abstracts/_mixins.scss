@@ -1,0 +1,17 @@
+/*
+    media queries denoted numerically
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == four-hundred {
+        @media(max-width: 400px) { @content };
+    }
+    @if $breakpoint == six-hundred {
+        @media(max-width: 600px) { @content };
+    }
+    @if $breakpoint == seven-hundred {
+        @media(max-width: 700px) { @content };
+    }
+    @if $breakpoint == eight-hundred {
+        @media(max-width: 800px) { @content };
+    }
+}

@@ -4,12 +4,7 @@
     height: 100%;
 
     &__tint {
-        // position: absolute;
-        // width: 100%;
-        // height: 100%;
-        // background-color: $color-2;
-        // opacity: .1;
-        // z-index: 2;
+        // decide if you want some tint over header pic
     }
     
     &__img {
@@ -19,25 +14,27 @@
         width: 100%;
         height: 100%;
         background-size: cover;
-        opacity: .1;
+        opacity: .1; // faded image effect
         z-index: 1;
     }
 
+    // container for all header text
     &__text {
         position: absolute;
         top: 5rem;
         left: 5rem;
         z-index: 3;
         color: $color-1;
-
         letter-spacing: .3rem;
     }
 
+    // "hi, i'm grant kim"
     &__heading--1 {
         font-size: 4rem;
         border-bottom: 3px solid $color-3;
     }
 
+    // "my perfect day"
     &__heading--2 {
         margin-bottom: 2rem;
         font-size: 3rem;
@@ -47,9 +44,42 @@
         margin-left: 5rem;
         font-size: 3rem;
 
+        // "step _."
         span {
             display: inline-block;
             font-size: 1.75rem;
+        }
+    }
+
+    @include respond(six-hundred) {
+        &__text {
+            display: block;
+            margin-top: 0rem;
+            left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: .2rem;
+        }
+
+        &__heading--1 {
+            font-size: 3.5rem;
+            border-bottom: 2px solid $color-3;
+        }
+
+        &__heading--2 {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        &__step {
+            font-size: 2.5rem;
+            margin-left: 0;
+            text-align: center;
+    
+            // "step _."
+            span {
+                display: inline-block;
+                font-size: 1.5rem;
+            }
         }
     }
 }

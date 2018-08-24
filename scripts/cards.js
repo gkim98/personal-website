@@ -3,19 +3,27 @@ web:
     integrated language
     streamlines
     sound escape
-
-mobile:
-    fruit saver
-
 data:
     data plus
-    how to kickoff kickstarter
-
-web and data:
     math visualization
-    machine learning interface
+    how to kickoff kickstarter
 */
+
+/*
+format of a card:
+    img_url: path to the card's image
+    type: type of project (in array because future may have multiple tags)
+    title: name of the project
+    info: stuff like dates
+    background: motivation for the project
+    summary: the project itself or what I did
+    github: github link
+    tools: what did I use to build the project
+*/
+
+// takes you to link on Google Chrome store
 integratedLanguageLink = '<a href="https://chrome.google.com/webstore/detail/integrated-language/gecndgpfcacjllppgiffgfdhpdgibjan" target="_blank" class="card__link">Integrated Language</a>'
+// takes you to Data+ website
 dataPlusLink = '<a href="https://bigdata.duke.edu/projects/complex-decisions-real-numbers-medical-decision-making" target="_blank" class="card__link">Data+</a>'
 
 cards = [

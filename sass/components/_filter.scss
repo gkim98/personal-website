@@ -3,11 +3,10 @@
     padding: 0 5rem;
     max-width: 100rem;
     margin: 0 auto;
-    margin-bottom: 7.5rem;
+    margin-bottom: 3rem;
 
     &__option {
         flex-grow: 1;
-        position: relative;
         font-size: 2rem;
         letter-spacing: .3rem;
         padding: 1.5rem 0;
@@ -16,6 +15,7 @@
         transition: all .3s;
         overflow: hidden;
 
+        // gives the filter a curvy look at ends
         &:first-child {
             border-top-left-radius: 2.5rem;
             border-bottom-left-radius: 2.5rem;
@@ -26,12 +26,23 @@
             border-bottom-right-radius: 2.5rem;
         }
 
+        // hovered option rises
         &:hover {
             transform: translateY(-.5rem);
         }
     }
+
+    @include respond(eight-hundred) {
+        // filter bar is not squished
+        padding: 0 1rem;
+    }
+
+    @include respond(four-hundred) {
+        margin-bottom: 3rem;
+    }
 }
 
+// for the selected type
 .selected {
     background-color: $color-3;
     color: $color-4;

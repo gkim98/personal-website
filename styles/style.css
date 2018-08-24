@@ -1,3 +1,6 @@
+/*
+    media queries denoted numerically
+*/
 *,
 *::after,
 *::before {
@@ -21,8 +24,10 @@ body {
 .heading-primary {
   font-size: 3rem;
   letter-spacing: .3rem;
-  margin-bottom: 3rem;
-  color: #222831; }
+  margin-bottom: 3rem; }
+  @media (max-width: 400px) {
+    .heading-primary {
+      font-size: 2rem; } }
 
 .about__text {
   font-size: 2rem;
@@ -31,9 +36,10 @@ body {
   padding: 0rem 10rem;
   max-width: 120rem;
   text-align: center; }
-
-.u-margin-bottom-small {
-  margin-bottom: 5rem !important; }
+  @media (max-width: 800px) {
+    .about__text {
+      font-size: 1.7rem;
+      padding: 0; } }
 
 .u-color-4 {
   color: #eeeeee !important; }
@@ -59,14 +65,22 @@ body {
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
   .bubble__heading {
     display: inline-block;
-    width: 70%;
+    width: 80%;
     font-size: 2rem;
+    font-weight: 700;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #eeeeee; }
   .bubble__description {
     font-size: 2rem;
     line-height: 1.5; }
+  @media (max-width: 600px) {
+    .bubble:hover {
+      transform: none;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); } }
+  @media (max-width: 400px) {
+    .bubble {
+      margin: 1rem .5rem; } }
 
 .bubble-holder {
   display: flex;
@@ -75,7 +89,7 @@ body {
 
 .card {
   position: relative;
-  margin: 3rem;
+  margin: 3rem 3rem;
   padding: 2rem;
   width: 70rem;
   height: 40rem;
@@ -127,8 +141,15 @@ body {
     color: #222831;
     font-weight: 700;
     border-bottom: 1px dotted #393e46;
-    transition: all .3s;
     cursor: pointer; }
+  .card__tools {
+    position: absolute;
+    display: inline-block;
+    right: 3rem;
+    bottom: 3rem;
+    font-size: 1.5rem; }
+    .card__tools span {
+      font-weight: 700; }
   .card__github {
     position: absolute;
     bottom: 3rem;
@@ -139,21 +160,44 @@ body {
     cursor: pointer; }
   .card__github:hover {
     transform: rotate(5deg) scale(1.1); }
-  .card__tool-box {
-    position: absolute;
-    right: 3rem;
-    bottom: 3rem;
-    font-size: 1.5rem; }
-  .card__tool-span {
-    font-weight: 700;
-    color: #222831; }
-  .card__tool-list {
-    color: #222831; }
   .card:not(:last-child) {
     margin-bottom: 2rem; }
   .card:hover {
     transform: translateY(-0.5rem) scale(1.03);
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 800px) {
+    .card {
+      width: 50rem;
+      height: auto;
+      padding: 2rem; }
+      .card:not(:last-child) {
+        margin-bottom: .5rem; }
+      .card__img {
+        width: 100%; }
+      .card__text {
+        display: block; }
+      .card__tools {
+        display: block;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0; }
+      .card__github {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0; }
+        .card__github:hover {
+          transform: none; }
+      .card:hover {
+        transform: none;
+        box-shadow: none; } }
+  @media (max-width: 400px) {
+    .card {
+      padding: 1rem;
+      margin: 1.5rem 0; } }
 
 .card-holder {
   width: 100%;
@@ -193,16 +237,35 @@ body {
     .header__step span {
       display: inline-block;
       font-size: 1.75rem; }
+  @media (max-width: 600px) {
+    .header__text {
+      display: block;
+      margin-top: 0rem;
+      left: 50%;
+      transform: translateX(-50%);
+      letter-spacing: .2rem; }
+    .header__heading--1 {
+      font-size: 3.5rem;
+      border-bottom: 2px solid #00adb5; }
+    .header__heading--2 {
+      margin-bottom: 1.5rem;
+      font-size: 2.5rem; }
+    .header__step {
+      font-size: 2.5rem;
+      margin-left: 0;
+      text-align: center; }
+      .header__step span {
+        display: inline-block;
+        font-size: 1.5rem; } }
 
 .filter {
   display: flex;
   padding: 0 5rem;
   max-width: 100rem;
   margin: 0 auto;
-  margin-bottom: 7.5rem; }
+  margin-bottom: 3rem; }
   .filter__option {
     flex-grow: 1;
-    position: relative;
     font-size: 2rem;
     letter-spacing: .3rem;
     padding: 1.5rem 0;
@@ -218,6 +281,12 @@ body {
       border-bottom-right-radius: 2.5rem; }
     .filter__option:hover {
       transform: translateY(-0.5rem); }
+  @media (max-width: 800px) {
+    .filter {
+      padding: 0 1rem; } }
+  @media (max-width: 400px) {
+    .filter {
+      margin-bottom: 3rem; } }
 
 .selected {
   background-color: #00adb5;
@@ -226,15 +295,27 @@ body {
 .section-header {
   height: 100vh;
   min-height: 40rem; }
+  @media (max-width: 600px) {
+    .section-header {
+      min-height: 60rem; } }
 
 .section-about {
   text-align: center;
   padding: 7.5rem 3rem; }
+  @media (max-width: 400px) {
+    .section-about {
+      padding: 3rem 1rem; } }
 
 .section-projects {
   text-align: center;
   padding: 7.5rem 3rem;
   background-color: #222831; }
+  @media (max-width: 800px) {
+    .section-projects {
+      padding: 7.5rem 1rem; } }
+  @media (max-width: 400px) {
+    .section-projects {
+      padding: 3rem 1rem; } }
 
 .section-contact {
   text-align: center;
@@ -259,3 +340,13 @@ body {
     width: auto; }
     .section-contact .contact-logo--github {
       margin-right: 1rem; }
+  @media (max-width: 800px) {
+    .section-contact .contact-email:hover,
+    .section-contact .contact-email:link:hover,
+    .section-contact .contact-email:visited:hover {
+      transform: none; } }
+  @media (max-width: 400px) {
+    .section-contact {
+      padding: 3rem 1rem; }
+      .section-contact .contact-hi {
+        font-size: 1.5rem; } }
