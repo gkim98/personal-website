@@ -243,7 +243,8 @@ body {
       margin-top: 0rem;
       left: 50%;
       transform: translateX(-50%);
-      letter-spacing: .2rem; }
+      letter-spacing: .2rem;
+      width: 28.08rem; }
     .header__heading--1 {
       font-size: 3.5rem;
       border-bottom: 2px solid #00adb5; }

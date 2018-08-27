@@ -58,6 +58,8 @@
             left: 50%;
             transform: translateX(-50%);
             letter-spacing: .2rem;
+            // prevents text in header from wrapping
+            width: 28.08rem;
         }
 
         &__heading--1 {
