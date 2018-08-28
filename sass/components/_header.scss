@@ -9,13 +9,15 @@
     
     &__img {
         position: absolute;
-        background-image: url(../../img/man.jpg);
+        background-image: url(../../img/grant-pic.jpg);
 
         width: 100%;
         height: 100%;
         background-size: cover;
-        opacity: .1; // faded image effect
+        opacity: 1; // faded image effect
         z-index: 1;
+
+        background-position: right;
     }
 
     // container for all header text
@@ -26,6 +28,8 @@
         z-index: 3;
         color: $color-1;
         letter-spacing: .3rem;
+        background-color: rgba($color-white, .85);
+        padding: 3rem;
     }
 
     // "hi, i'm grant kim"
@@ -59,7 +63,7 @@
             transform: translateX(-50%);
             letter-spacing: .2rem;
             // prevents text in header from wrapping
-            width: 28.08rem;
+            width: 34.2rem;
         }
 
         &__heading--1 {

@@ -177,13 +177,14 @@ body {
       .card__text {
         display: block; }
       .card__tools {
-        display: block;
+        display: inline-block;
         position: relative;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0; }
       .card__github {
+        display: block;
         position: relative;
         top: 0;
         bottom: 0;
@@ -212,19 +213,22 @@ body {
   height: 100%; }
   .header__img {
     position: absolute;
-    background-image: url(../../img/man.jpg);
+    background-image: url(../../img/grant-pic.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
-    opacity: .1;
-    z-index: 1; }
+    opacity: 1;
+    z-index: 1;
+    background-position: right; }
   .header__text {
     position: absolute;
     top: 5rem;
     left: 5rem;
     z-index: 3;
     color: #222831;
-    letter-spacing: .3rem; }
+    letter-spacing: .3rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 3rem; }
   .header__heading--1 {
     font-size: 4rem;
     border-bottom: 3px solid #00adb5; }
@@ -244,7 +248,7 @@ body {
       left: 50%;
       transform: translateX(-50%);
       letter-spacing: .2rem;
-      width: 28.08rem; }
+      width: 34.2rem; }
     .header__heading--1 {
       font-size: 3.5rem;
       border-bottom: 2px solid #00adb5; }
@@ -295,17 +299,17 @@ body {
 
 .section-header {
   height: 100vh;
-  min-height: 40rem; }
+  min-height: 60rem; }
   @media (max-width: 600px) {
     .section-header {
-      min-height: 60rem; } }
+      min-height: 80rem; } }
 
 .section-about {
   text-align: center;
   padding: 7.5rem 3rem; }
   @media (max-width: 400px) {
     .section-about {
-      padding: 3rem 1rem; } }
+      padding: 3rem 2rem; } }
 
 .section-projects {
   text-align: center;
