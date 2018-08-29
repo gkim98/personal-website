@@ -44,7 +44,7 @@ cards = [
         type: ['web'],
         title: 'sound escape',
         info: 'packhacks (april 2018)',
-        background: "3D audio-recording microphones can cost hundrends, even thousands, of dollars.",
+        background: "3D audio-recording microphones can cost hundreds, even thousands, of dollars.",
         summary: "Sound Escape allows you to create 3D soundscapes cheaply and conveniently using any 2D audio clips. Simply position your sounds around the listener to create rich audio environments.",
         github: "https://github.com/gkim98/sound-escape",
         tools: ['js', 'react', 'howler.js']
