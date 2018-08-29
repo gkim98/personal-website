@@ -27,7 +27,7 @@ body {
   margin-bottom: 3rem; }
   @media (max-width: 400px) {
     .heading-primary {
-      font-size: 2rem; } }
+      font-size: 2.5rem; } }
 
 .about__text {
   font-size: 2rem;
@@ -38,8 +38,12 @@ body {
   text-align: center; }
   @media (max-width: 800px) {
     .about__text {
-      font-size: 1.7rem;
-      padding: 0; } }
+      font-size: 2rem;
+      padding: 0;
+      text-align: center; } }
+  @media (max-width: 400px) {
+    .about__text {
+      margin-bottom: 3rem; } }
 
 .u-color-4 {
   color: #eeeeee !important; }
@@ -177,28 +181,37 @@ body {
       .card__text {
         display: block; }
       .card__tools {
-        display: inline-block;
+        display: block;
         position: relative;
         top: 0;
         bottom: 0;
         right: 0;
-        left: 0; }
+        left: 0;
+        text-align: left;
+        margin-top: 1.2rem;
+        margin-bottom: 1.5rem; }
       .card__github {
         display: block;
         position: relative;
         top: 0;
         bottom: 0;
         right: 0;
-        left: 0; }
+        left: 0;
+        margin: 0 auto; }
         .card__github:hover {
           transform: none; }
       .card:hover {
         transform: none;
         box-shadow: none; } }
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     .card {
       padding: 1rem;
       margin: 1.5rem 0; } }
+  @media (max-width: 400px) {
+    .card {
+      padding: 1rem; }
+      .card__info {
+        font-size: 1.5rem; } }
 
 .card-holder {
   width: 100%;
@@ -291,7 +304,9 @@ body {
       padding: 0 1rem; } }
   @media (max-width: 400px) {
     .filter {
-      margin-bottom: 3rem; } }
+      margin-bottom: 3rem; }
+      .filter__option {
+        font-size: 1.5rem; } }
 
 .selected {
   background-color: #00adb5;

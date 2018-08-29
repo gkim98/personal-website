@@ -5,6 +5,9 @@
     @if $breakpoint == four-hundred {
         @media(max-width: 400px) { @content };
     }
+    @if $breakpoint == five-hundred {
+        @media(max-width: 500px) { @content };
+    }
     @if $breakpoint == six-hundred {
         @media(max-width: 600px) { @content };
     }

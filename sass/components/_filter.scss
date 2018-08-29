@@ -39,6 +39,10 @@
 
     @include respond(four-hundred) {
         margin-bottom: 3rem;
+        
+        &__option {
+            font-size: 1.5rem;
+        }
     }
 }
 
