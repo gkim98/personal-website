@@ -11,6 +11,7 @@ let createCards = function(type) {
     // fragment -> quicker DOM manipulation
     let cardsFragment = document.createDocumentFragment();
     cards.forEach(function(card) {
+        console.log(card)
         // chooses projects of the specified type
         if(!card.type.includes(type)) { return; };
 
@@ -51,12 +52,14 @@ let createCards = function(type) {
         toolContainer.innerHTML = `<span>tools: </span>${toolsString}`; // span to separately style "tools"
 
         // adds github link
-        let github = cardContent.appendChild(document.createElement('a'));
-        github.href = card.github;
-        github.target = '_blank'; // opens link in new tab
-        let gitLogo = github.appendChild(document.createElement('img'));
-        gitLogo.className = 'card__github';
-        gitLogo.src = '../img/github-logo.png';
+        if(card.github) {
+            let github = cardContent.appendChild(document.createElement('a'));
+            github.href = card.github;
+            github.target = '_blank'; // opens link in new tab
+            let gitLogo = github.appendChild(document.createElement('img'));
+            gitLogo.className = 'card__github';
+            gitLogo.src = '../img/github-logo.png';
+        }
     
         // adds cards to temporary fragment
         cardsFragment.appendChild(cardContainer);
@@ -133,7 +136,7 @@ let addFilterListeners = function() {
 */
 let main = function() {
     // loads up initial cards
-    let firstCards = createCards('web');
+    let firstCards = createCards('experience');
     addCards(firstCards);
     addFilterListeners();
 }

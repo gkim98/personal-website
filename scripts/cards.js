@@ -25,12 +25,46 @@ format of a card:
 integratedLanguageLink = '<a href="https://chrome.google.com/webstore/detail/integrated-language/gecndgpfcacjllppgiffgfdhpdgibjan" target="_blank" class="card__link">Integrated Language</a>'
 // takes you to Data+ website
 dataPlusLink = '<a href="https://bigdata.duke.edu/projects/complex-decisions-real-numbers-medical-decision-making" target="_blank" class="card__link">Data+</a>'
+weardukeLink = '<a href="https://wearduke.duke.edu/" target="_blank" class="card__link">WearDuke</a>'
 
 cards = [
     // integrated language
     {
+        img_url: '../img/benji.png',
+        type: ['projects'],
+        title: 'benji',
+        info: 'capital one swe summit (jan 2019)',
+        background: "Benji is the friendly ATM that helps children learn effective saving skills. The product has a kid-friendly interface with Tensorflow.js facial recognition for simple authentication and voice interaction for the non-readers.",
+        summary: ``,
+        github: 'https://github.com/vli1721/benji',
+        tools: ['flask, react, js, css, firebase']
+    },
+    // foresite
+    {
+        img_url: '../img/foresite.png',
+        type: ['projects'],
+        title: 'foresite',
+        info: 'pennapps (sept 2019)',
+        background: "During times of disaster, the two most difficult obstacles are spreading awareness to those in the area and allowing first responders to easily assess the situation.",
+        summary: `With both a mobile and web component, Foresite uses a crowd-sourcing approach to quickly spread information while simultaneously visualizing the affected area.`,
+        github: 'https://github.com/gkim98/foresite-web',
+        tools: ['react, redux, js, css']
+    },
+    // sound escape
+    {
+        img_url: '../img/sound-escape.PNG',
+        type: ['projects'],
+        title: 'sound escape',
+        info: 'packhacks (april 2018)',
+        background: "3D audio-recording microphones can cost hundreds, even thousands, of dollars.",
+        summary: "Sound Escape allows you to create 3D soundscapes cheaply and conveniently using any 2D audio clips. Simply position your sounds around the listener to create rich audio environments.",
+        github: "https://github.com/gkim98/sound-escape",
+        tools: ['react', 'redux', 'js', 'css', 'howler']
+    },
+    // integrated language
+    {
         img_url: '../img/integrated-language.PNG',
-        type: ['web'],
+        type: ['projects'],
         title: 'integrated language',
         info: 'hackduke (oct 2017), cont. jan 2018',
         background: "Vocabulary can be the most boring part of learning a language, especially if your tool of choice is endless flashcards.",
@@ -38,59 +72,47 @@ cards = [
         github: 'https://github.com/shavavo/IntegratedLanguage',
         tools: ['js']
     },
-    // sound escape
+    // nvidia
     {
-        img_url: '../img/sound-escape.PNG',
-        type: ['web'],
-        title: 'sound escape',
-        info: 'packhacks (april 2018)',
-        background: "3D audio-recording microphones can cost hundreds, even thousands, of dollars.",
-        summary: "Sound Escape allows you to create 3D soundscapes cheaply and conveniently using any 2D audio clips. Simply position your sounds around the listener to create rich audio environments.",
-        github: "https://github.com/gkim98/sound-escape",
-        tools: ['js', 'react', 'howler.js']
+        img_url: '../img/nvidia.jpg',
+        type: ['experience'],
+        title: 'software engineering intern - nvidia',
+        info: 'may 2019 - aug 2019',
+        background: `Last summer, I interned at NVIDIA, as part of the autonomous vehicle team.`,
+        summary: 'I contributed to their robust infrastructure by creating pipelines that automatically run performance evaluations on cluster and implementing new methods of ground truth generation for neural network training.',
+        tools: ['c++, python, cmake']
     },
-    // streamlines
+    // wearduke
     {
-        img_url: '../img/streamlines.PNG',
-        type: ['web'],
-        title: 'streamlines',
-        info: 'feb 2018',
-        background: "One of the biggest sources of writer's block is doubt. It makes writers scrutinize every word they write.",
-        summary: "Streamlines is a text editor that forces writers to move forward and stay in the present by literally making it impossible to look back.",
-        github: "https://github.com/gkim98/streamlines",
-        tools: ['js', 'react', 'firebase']
+        img_url: '../img/wearduke.png',
+        type: ['experience'],
+        title: 'lead web developer - wearduke',
+        info: 'oct 2018 - aug 2019',
+        background: `${weardukeLink} is a new initiative at Duke that is promoting health and wellness through the use of wearable technology.`,
+        summary: 'Using React and Gatsby, I created the website for all incoming participants. To ensure equal use, the site has been iterated to pass reviews for accessibility and cross-browser compatibility.',
+        tools: ['react, gatsby, js, css']
     },
+
     // data plus
     {
         img_url: '../img/data-plus.PNG',
-        type: ['data'],
-        title: 'complex decisions, real numbers',
+        type: ['experience'],
+        title: 'data science intern - data+',
         info: 'may 2018 - aug 2018',
         background: `With the support of Duke's ${dataPlusLink} program, I spent ten weeks working with fellow students to explore how physician-patient interaction affects medical decision-making.`,
         summary: 'Using classification models and topic modeling, we were able to extract which parts of conversation were associated with differences in treatment decision.',
         github: 'https://github.com/sjgarland8/DukeDataPlus-Summer18-Proj17',
-        tools: ['numpy stack', 'scikit-learn', 'nltk', 'gensim', 'xgboost']
+        tools: ['python', 'numpy stack', 'scikit-learn', 'nltk', 'gensim', 'xgboost']
     },
     // math visualization
     {
         img_url: '../img/math-visualization.PNG',
-        type: ['data'],
-        title: 'math department dashboard',
+        type: ['experience'],
+        title: 'research assistant - duke math department',
         info: 'feb 2018 - may 2018',
-        background: "Working with Duke's mathematics department, I created a visualization dashboard to better understand the trends concerning the composition of students taking courses in the department.",
+        background: "Working with Duke's mathematics department, I created a visualization dashboard to better help them understand the trends concerning the composition of students taking courses in the department.",
         summary: '',
         github: 'https://github.com/gkim98/math-visualization',
-        tools: ['js', 'react', 'victory.js']
+        tools: ['react', 'js', 'css']
     },
-    // how to kickoff kickstarter
-    {
-        img_url: '../img/kickstarter.PNG',
-        type: ['data'],
-        title: 'how to kickoff kickstarter',
-        info: 'jan 2018',
-        background: "During Kickstarter campaigns, you set a fundraising goal, and if you reach it, you get the money. Otherwise, you get nothing. As a result, campaigns have a strategic component.",
-        summary: "In my analysis, I explore the factors that contribute to success on Kickstarter for users to apply to their own campaigns.",
-        github: 'https://github.com/gkim98/kickoff-kickstarter',
-        tools: ['numpy stack', 'seaborn']
-    }
 ]
